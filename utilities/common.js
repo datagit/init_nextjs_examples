@@ -41,9 +41,11 @@ let printConsoleLog = (content, title, logLevel = null) => {
             break;
     }
     if (color != null) {
-        console.log(color(title), content);
+        console.log(color(title));
+        console.log(content);
     } else {
-        console.log(title, content);
+        console.log(title);
+        console.log(content);
     }
 }
 

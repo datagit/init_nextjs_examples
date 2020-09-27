@@ -20,6 +20,20 @@ it('renders components Greeting to create snapshot', () => {
 it('unit test common.js', () => {
   common.printConsoleLog(common.TRACE, "title", { a: 1, b: "abc" });
   const cat = new common.Cat('HAHA');
-  common.printConsoleLog(common.DEBUG, "CAT object", cat.makeSound());
+  common.printConsoleLog(cat.makeSound(), "CAT object", common.ERROR);
   expect(common.sum(1, 2, 3)).toBe(6);
 })
+
+it('fetching data external api', async () => {
+  const axios = require('axios');
+  try {
+    await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json').then(
+      (response) => {
+        common.printConsoleLog(response.data, "RESPONSE", common.WARN);
+      }
+    );
+  } catch (error) {
+    console.error(error);
+  }
+})
+
