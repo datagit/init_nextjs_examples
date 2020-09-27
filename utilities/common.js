@@ -17,6 +17,64 @@ let sum = (...args) => {
     return sum;
 };
 
+// Object vs array
+let accessArrayObject = () => {
+    let myObject = {
+        name: "NAME1",
+        age: 100,
+    };
+    for (let key in myObject) {
+        console.log(key); // logs keys in myObject
+        console.log(myObject[key]); // logs values in myObject
+    }
+}
+
+let addItemInArrayObject = () => {
+    let products = [
+        { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
+        { category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' },
+    ];
+
+    let product = { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' };
+    console.log(
+        "action",
+        [...products, product]
+    );
+}
+
+let deleteItemInArrayObject = (id) => {
+    let products = [
+        { id: 1, category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
+        { id: 2, category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' },
+    ];
+    console.log(
+        products.filter(product => product.id !== id)
+    );
+}
+
+let setKeyAndValueInObject = (key, value) => {
+    let product = { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' };
+    console.log(
+        { ...product, [key]: value }
+    )
+}
+
+let accessSomeThingInObject = () => {
+    let product = { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' };
+    let { name, price } = product;
+    console.log(
+        { name, price }
+    );
+}
+
+let accessItemInArray = () => {
+    let names = ['Mohtashim', 'Kannan', 'Kiran']
+    let [n1, n2, n3] = names;
+    console.log(n1);
+    console.log(n2);
+    console.log(n3);
+}
+
 let printConsoleLog = (content, title, logLevel = null) => {
     if (!IS_PRINT_CONSOLE_LOG) {
         return;
@@ -74,6 +132,12 @@ module.exports = {
     // functions
     sum: sum,
     printConsoleLog: printConsoleLog,
+    setKeyAndValueInObject: setKeyAndValueInObject,
+    deleteItemInArrayObject: deleteItemInArrayObject,
+    addItemInArrayObject: addItemInArrayObject,
+    accessArrayObject: accessArrayObject,
+    accessSomeThingInObject: accessSomeThingInObject,
+    accessItemInArray: accessItemInArray,
     // class
     Cat: Cat,
 };

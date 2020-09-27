@@ -37,3 +37,10 @@ it('fetching data external api', async () => {
   }
 })
 
+it('unit test array', () => {
+  common.setKeyAndValueInObject('name', "set name here");
+  common.setKeyAndValueInObject('new_key1', "set new value1 here");
+  common.accessSomeThingInObject();
+  common.accessItemInArray();
+  expect(common.sum(1, 2, 3)).toBe(6);
+})
