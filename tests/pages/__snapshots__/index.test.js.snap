@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders pages.index.js to create snapshot 1`] = `
+<div
+  className="container"
+>
+  <main
+    className="main"
+  >
+    <div>
+      <div>
+        <br />
+        <form>
+          <p>
+            <input
+              aria-label="labelText"
+              name="q"
+              placeholder="Search..."
+            />
+          </p>
+          <p>
+            <input
+              name="s"
+              type="checkbox"
+              value="1"
+            />
+             
+             
+            <span>
+              Only show products in stock
+            </span>
+          </p>
+        </form>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Name
+              </th>
+              <th>
+                Price
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th
+                colSpan="2"
+              >
+                Sporting Goods
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  style={Object {}}
+                >
+                  Football
+                </span>
+              </td>
+              <td>
+                <span>
+                  $49.99
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  style={Object {}}
+                >
+                  Baseball
+                </span>
+              </td>
+              <td>
+                <span>
+                  $9.99
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  style={
+                    Object {
+                      "color": "red",
+                    }
+                  }
+                >
+                  Basketball
+                </span>
+              </td>
+              <td>
+                <span>
+                  $29.99
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th
+                colSpan="2"
+              >
+                Electronics
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  style={Object {}}
+                >
+                  iPod Touch
+                </span>
+              </td>
+              <td>
+                <span>
+                  $99.99
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  style={
+                    Object {
+                      "color": "red",
+                    }
+                  }
+                >
+                  iPhone 5
+                </span>
+              </td>
+              <td>
+                <span>
+                  $399.99
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  style={Object {}}
+                >
+                  Nexus 7
+                </span>
+              </td>
+              <td>
+                <span>
+                  $199.99
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <footer
+    className="footer"
+  >
+    footer
+  </footer>
+</div>
+`;
